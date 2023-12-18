@@ -7,3 +7,6 @@ After we login we we will face the home page there are some sections here when w
 <img width="958" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/44501415-2394-4881-bfa8-0134bd074165">
 <img width="960" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/ba3801d7-7f03-409c-9f42-7212b20b0857">
 In this page when we click start button we will see image upload page. In image upload page we can upload image what ever we want when we upload image and click upload button we will see original image and manipulated image in next page
+<img width="955" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/e73e909b-f199-4131-83f3-dab3e5a6fde8">
+<img width="957" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/f9a8e326-7e0c-4989-afb9-e0419b394fdd">
+We can check this images. Let's check original and manipulated images.
