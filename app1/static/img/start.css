@@ -1,0 +1,14 @@
+.h1 {
+    color: aqua;
+    font-size: 32px;
+}
+.btn {
+    float: right;
+    width: 100px;
+    height: 40px;
+}
+.btn2 {
+    align-items: center;
+    width: 200px;
+    height: 40px;
+}

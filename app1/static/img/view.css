@@ -1,0 +1,71 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('abs.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+  }
+
+  .m {
+    flex: 0 1 calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .m h2 {
+    margin-bottom: 10px;
+  }
+
+  .m img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .b {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .b a {
+    text-decoration: none;
+  }
+
+  .b button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .c {
+    margin-top: -42px;
+    margin-left: 21rem;
+  }
+  .c a {
+    text-decoration: none;
+  }
+
+  .c button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }

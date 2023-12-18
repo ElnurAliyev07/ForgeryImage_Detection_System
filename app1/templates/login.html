@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Design by foolishdeveloper.com -->
+    <title>SerbestIS</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'img/login.css' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <form method="post">
+      {% for message in messages %}
+      <p
+        style="
+          text-align: center;
+          color: black;
+          margin-top: -12px;
+          border: 2px solid yellow;
+          background: white;
+        "
+        id="messages"
+      >
+        {{message}}
+      </p>
+      {% endfor %}
+      <h3>Login Here</h3>
+      {% csrf_token %}
+      <label for="username">Username</label>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        id="username"
+        name="username"
+      />
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" name="pass" />
+
+      <button type="submit">Log In</button>
+      <a href="{% url 'signup' %}">Create a account</a>
+    </form>
+  </body>
+</html>

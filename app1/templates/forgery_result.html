@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerbestIS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #ecf0f1;
+            background: linear-gradient(45deg, #3498db, #e74c3c, #9b59b6, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .result-box {
+            background-color: rgba(44, 62, 80, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #3498db; /* Forgery Detected color */
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #e74c3c; /* Forgery Detected color */
+        }
+
+        .cta-button, .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 17px;
+            font-size: 1.2em;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button {
+            background-color: #e74c3c;
+        }
+
+        .back-button {
+            background-color: #3498db;
+            margin-right: 10px;
+        }
+
+        .cta-button:hover, .back-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Animation */
+        body.loaded .result-box {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <div class="icon">🚫</div>
+        <h1>Forgery Detected</h1>
+        {% if forgery_detected %}
+            <p>Oops! This image appears to be a forgery.</p>
+        {% else %}
+            <p>Great news! No forgery detected in this image.</p>
+        {% endif %}
+        <a href="#" class="cta-button">View Details</a>
+        <a href="{% url 'backk' %}" class="back-button">Back</a>    
+    </div>
+
+    <script>
+        // Add a class to the body to trigger the animation
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("loaded");
+        });
+    </script>
+</body>
+</html>

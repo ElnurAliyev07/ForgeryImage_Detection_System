@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SerbestIS</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        overflow: hidden;
+        background-color: #87ceeb; /* Light Blue background */
+      }
+
+      .snowflake {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+      .cloud {
+        position: absolute;
+        width: 420px;
+        height: 175px;
+        margin-top: 65px;
+        margin-left: 100px;
+        background-color: #ddd;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        border-radius: 50% 50% 50% 50% / 60% 60% 100% 100%;
+        animation: moveCloud 6s infinite alternate;
+      }
+      .cloud:nth-child(2) {
+        left: 81rem; /* Adjust the distance between clouds */
+        animation-delay: 1s; /* Add a delay to the second cloud's animation */
+      }
+      @keyframes moveCloud {
+        from {
+          transform: translateX(-3vw); 
+        }
+        to {
+          transform: translateX(3vw); 
+      }
+    }
+      .a {
+        text-align: center;
+        font-size: 40px;
+      }
+      form {
+        align-items: center;
+        text-align: center;
+      }
+      .btn {
+        width: 100px;
+        height: 35px;
+        font-size: 18px;
+        margin-left: -45px;
+      }
+      .btn1 {
+        width: 100px;
+        height: 35px;
+        font-size: 18px;
+      }
+      .d {
+        display: flex;
+        justify-content: center;
+        margin-top: -35px;
+        margin-left: 210px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <p class="a">Upload Image</p>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <button class="btn" type="submit">Upload</button>
+    </form>
+    <div class="d">
+      <a href="{% url 'logpage' %}"><button class="btn1">Logout</button></a>
+    </div>
+    <script>
+      // Generate random number between min and max
+      function getRandomBetween(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      // Create a snowflake element and append it to the body
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.style.width = `${getRandomBetween(5, 20)}px`;
+        snowflake.style.height = `${getRandomBetween(5, 20)}px`;
+        snowflake.style.left = `${getRandomBetween(0, window.innerWidth)}px`;
+        document.body.appendChild(snowflake);
+
+        // Random delay for each snowflake
+        const delay = getRandomBetween(0, 5000);
+        snowflake.style.animationDuration = `${getRandomBetween(5, 15)}s`;
+        snowflake.style.animationDelay = `-${delay}ms`;
+
+        // Remove snowflake when it reaches the bottom
+        snowflake.addEventListener("animationiteration", () => {
+          snowflake.style.left = `${getRandomBetween(0, window.innerWidth)}px`;
+          snowflake.style.animationDuration = `${getRandomBetween(5, 15)}s`;
+        });
+      }
+
+      // Create multiple snowflakes
+      const numberOfSnowflakes = 50;
+      for (let i = 0; i < numberOfSnowflakes; i++) {
+        createSnowflake();
+      }
+    </script>
+  </body>
+</html>

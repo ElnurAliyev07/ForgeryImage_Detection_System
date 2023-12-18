@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SerbestIS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'img/contact.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Me</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'logcontact' %}">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <img src="{% static 'img/el.jpg'%}" alt="Creator Image" />
+      <h1 class="name">Elnur Aliyev</h1>
+      <p>
+        I am a 3rd year student of the Information Security major of the Academy
+        of the State Customs Committee of the Republic of Azerbaijan.
+      </p>
+
+      <ul>
+        <li>
+          Email:
+          <a href="mailto:Eliyev.Elnur@ascca.edu.az"
+            >Eliyev.Elnur@ascca.edu.az</a
+          >
+        </li>
+        <li>Phone: +994 50-535-77-71</li>
+        <li>
+          Social Links:
+          <ul>
+            <li>
+              <i class="fab fa-twitter"></i>
+              <a href="https://twitter.com/ElnurAliyev" target="_blank"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/in/elnur-aliyev-a17160265/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/ElnurAliyev07" target="_blank"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

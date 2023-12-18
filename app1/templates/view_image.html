@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SerbestIS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'img/view.css' %}">
+  </head>
+  <body>
+    <h1>Image Details</h1>
+    <div class="con">
+      <div class="m">
+        <h2>Original Image</h2>
+        <img
+          style="width: 35rem; height: 25rem"
+          src="{{ original_image_data }}"
+          alt="Original Image"
+        />
+      </div>
+      <div class="m">
+        <h2>Manipulated Image</h2>
+        <img
+          style="width: 35rem; height: 25rem"
+          src="data:image/png;base64,{{ manipulated_image_data }}"
+          alt="Manipulated Image"
+        />
+      </div>
+    </div>
+    
+    <div class="b">
+      <a href="{% url 'back' %}"><button>Back</button></a>
+      <a href="{% url 'check' %}"><button>Check</button></a>
+    </div>
+    <div class="c"><a href="{% url 'Check' %}"><button>Check</button></a></div>
+  </body>
+</html>
