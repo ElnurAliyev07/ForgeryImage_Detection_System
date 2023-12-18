@@ -10,3 +10,5 @@ In this page when we click start button we will see image upload page. In image 
 <img width="955" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/e73e909b-f199-4131-83f3-dab3e5a6fde8">
 <img width="957" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/f9a8e326-7e0c-4989-afb9-e0419b394fdd">
 We can check this images. Let's check original and manipulated images.
+<img width="960" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/ed894253-67fd-4407-ad48-ead4700e719a">
+<img width="960" alt="image" src="https://github.com/ElnurAliyev07/ForgeryImage_Detection_System/assets/115114253/31d755a4-3118-4ee2-8591-0db2f504de84">
